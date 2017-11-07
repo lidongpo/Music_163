@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import {
 	BrowserRouter as Router,
 	Route,
-	NavLink, Switch
+	NavLink
 } from 'react-router-dom';
+import { connect } from 'react-redux'
+import {mapStateToProps,mapDispatchToProps} from './store/index'
 import Home from './view/Home';
 import About from './view/About';
 import Detail from './view/Detail'
@@ -25,17 +27,21 @@ const Tab = () => {
 	)
 }
 
-const App=({detail})=>{
-	if(!detail){
-		return(
+const app = ( {detail} ) => {
+	if (!detail) {
+		return (
 			<div>
 				<Tab />
 				<NavBar />
 			</div>
 		)
 	}
-	return(
+	return (
 		<NavBar />
 	)
 }
+const App = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(app)
 export default App;

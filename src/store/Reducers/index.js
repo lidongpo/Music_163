@@ -1,10 +1,8 @@
-const defaultState={
-    detail:false
-}
-export const reducer= function(state=defaultState,action){
+import {DETAIL_PAGE} from '../Actions/Action-Types'
+export const reducer= function(state={detail:false},action){
     switch(action.type){
-        case 'detail':
-        return Object.assign({},state,{detail:!action.detail})
+        case DETAIL_PAGE:
+        return Object.assign({},state,{detail:action.detail})
         default:
         return state
     }
