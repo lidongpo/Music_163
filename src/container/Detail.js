@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux'
-import Index from '../component/Detail/index'
+import Index from '../view/Detail/index'
 import {mapStateToProps,mapDispatchToProps} from '../store/index'
 const detail=(props)=>{
     props.goToDetail()

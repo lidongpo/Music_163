@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {List} from '../../component/List/index'
 
 const Index=({prop})=>{
     return(<div>
-        <h1>首页</h1>
+        <List value="厕所" />
         <button onClick={()=>{prop.goToDetail();prop.history.push('/cd')}}>去详情页面</button>
         </div>)
 }

@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom';
 import { connect } from 'react-redux'
 import {mapStateToProps,mapDispatchToProps} from './store/index'
-import Home from './view/Home';
-import About from './view/About';
-import Detail from './view/Detail'
+import Home from './container/Home';
+import About from './container/About';
+import Detail from './container/Detail'
 const NavBar = () => {
 	return (
 		<div>
