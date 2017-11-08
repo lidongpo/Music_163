@@ -93,6 +93,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "redux-thunk": "^2.2.0"
+    "node-sass": "^4.6.0",
+    "redux-thunk": "^2.2.0",
+    "sass-loader": "^6.0.6"
   }
 }

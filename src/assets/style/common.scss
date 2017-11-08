@@ -1,0 +1,37 @@
+$defaultFontColor:#808080;
+$titleFontColor:#333;
+$subTitleFontColor:#999;
+$otherTextFontColor:#ccc;
+$mainColor:#d33a31;
+body {
+    margin: 0;
+    padding: 0;
+    color: $defaultFontColor;
+    font-size: 14px;
+}
+
+.list li {
+    display: flex;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: $subTitleFontColor;
+    background-color: #fff;
+    padding: 10px 0;
+    margin: 0;
+    .item {
+        list-style: none;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .active {
+            color: $mainColor;
+            border-bottom: 2px solid $mainColor;
+        }
+    }
+}

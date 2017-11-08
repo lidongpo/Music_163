@@ -20,9 +20,9 @@ const NavBar = () => {
 }
 const Tab = () => {
 	return (
-		<ul>
-			<li><NavLink to='/'>首页</NavLink>
-			</li><li><NavLink to='/about'>关于</NavLink></li>
+		<ul className='tab'>
+			<li className='item'><NavLink exact to='/' activeClassName='active'>首页</NavLink></li>
+			<li className='item'><NavLink to='/about'>关于</NavLink></li>
 		</ul>
 	)
 }
