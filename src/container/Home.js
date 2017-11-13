@@ -1,21 +1,20 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { connect } from 'react-redux'
 import Index from '../view/Home/index'
+import {save_Data,fetchPostsIfNeeded} from '../store/Actions/Action-Types'
 import { mapStateToProps, mapDispatchToProps } from '../store/index'
-const home = (props) => {
-    fetch('api/banner')
-        .then(function (response) {
-            return response.json()
-        }).then(function (json) {
-            console.log('parsed json', json)
-        }).catch(function (ex) {
-            console.log('parsing failed', ex)
-        })
-    return (<Index prop={props} />)
+class home extends Component{
+    
+    componentDidMount(){
+        this.props.dispatch(fetchPostsIfNeeded("personalized"))
+    }
+    render(){
+        return (<Index prop={this.props} />)
+    }
 }
+
 const Home = connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
 )(home);
 
 export default Home;
