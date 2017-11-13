@@ -10,10 +10,9 @@ export const store=configureStore(reducer)
 //     console.log(store.getState())
 // })
 export const mapStateToProps= function (state) {
-  console.log(state)
     return {
         detail: state.detail,
-        data:state
+        data:state.data
     }
   }
   export const mapDispatchToProps  = function (dispatch) {
