@@ -1,0 +1,43 @@
+.m-cd {
+    display: grid;
+    grid-column-gap: 2px;
+}
+
+ul.m-cd {
+    padding: 0;
+    overflow: hidden;
+}
+
+.g-2 {
+    grid-template-columns: repeat(2, calc(100%/2));
+}
+
+.g-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.g-2-b1 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.g-2-b1 .m-cd-item:nth-last-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.m-title {
+    border-left: 3px solid #d33a31;
+    padding-left: 10px;
+}
+
+.m-title .iconfont {
+    color: #999;
+}
+
+.m-cd-item img {
+    width: 100%;
+}
+
+.m-cd-item p {
+    font-size: 12px
+}

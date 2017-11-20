@@ -1,23 +1,20 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux'
 import Index from '../view/Home/index'
-import {save_Data,fetchPostsIfNeeded} from '../store/Actions/Action-Types'
-import { mapStateToProps, mapDispatchToProps } from '../store/index'
+import {fetchPostsIfNeeded,load_status} from '../store/Actions/Action-Types'
+import { mapStateToProps } from '../store/index'
 class home extends Component{
-    
     componentDidMount(){
-        
         const data=[
-            {url:"personalized",name:"personalized"},
-            {url:"personalized/privatecontent",name:"privatecontent"}
+            {url:"personalized",name:"推荐歌单"},
+            {url:"personalized/privatecontent",name:"独家放送"}
         ]
         for(let i in data){
-            this.props.dispatch(fetchPostsIfNeeded(data[i],data[i].name))
+            this.props.dispatch(fetchPostsIfNeeded(data[i],data.length))
         }
         
     }
     render(){
-        console.log(this.props)
         return (<Index prop={this.props} />)
     }
 }

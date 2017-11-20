@@ -12,7 +12,8 @@ export const store=configureStore(reducer)
 export const mapStateToProps= function (state) {
     return {
         detail: state.detail,
-        data:state.data
+        data:state.data,
+        loading:state.loading
     }
   }
   export const mapDispatchToProps  = function (dispatch) {

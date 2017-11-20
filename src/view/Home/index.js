@@ -1,17 +1,13 @@
 import React from 'react';
 import {List} from '../../component/List/index'
 const Index=({prop})=>{
-    console.log(prop.data)
     return(<div>
-        {/* {
-            prop.data.data_arr.map((i)=>{
-                console.log(i)
-                return(
-                    <List prop={prop} />
-                
+        {
+            !prop.loading?"":prop.data.data_arr.map((item,index)=>{
+                return <List prop={item.list} value={item.list.name} key={index} display={item.list.data.length==3?"g-2-b1":"g-3"} />
             })
         }
-         */}
+        
         <button onClick={()=>{prop.goToDetail();prop.history.push('/cd')}}>去详情页面</button>
         </div>)
 }
